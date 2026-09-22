@@ -1,0 +1,5 @@
+{
+  "discordApiBaseUrl": "https://discord.com/api/v10",
+  "logLevel": "info",
+  "requestTimeoutMs": 10000
+}

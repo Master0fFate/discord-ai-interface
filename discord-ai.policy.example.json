@@ -1,0 +1,20 @@
+{
+  "guilds": {
+    "GUILD_ID": {
+      "autonomous": false,
+      "trackCreatedRoles": true,
+      "trackCreatedChannels": true,
+      "operations": [],
+      "roleIds": [],
+      "channelIds": [],
+      "memberIds": [],
+      "protectedMemberIds": [],
+      "protectedRoleIds": [],
+      "allowedPermissionBits": "0",
+      "maxTimeoutSeconds": 86400,
+      "maxBanDeleteMessageSeconds": 0
+    }
+  },
+  "protectedMemberIds": [],
+  "protectedRoleIds": []
+}

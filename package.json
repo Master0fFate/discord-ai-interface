@@ -1,0 +1,100 @@
+{
+  "name": "discord-ai-interface",
+  "version": "0.1.0",
+  "description": "Policy-controlled Discord administration CLI and MCP server",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Master0fFate/discord-ai-interface.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Master0fFate/discord-ai-interface/issues"
+  },
+  "homepage": "https://github.com/Master0fFate/discord-ai-interface#readme",
+  "license": "AGPL-3.0-only",
+  "author": "Master0fFate (https://github.com/Master0fFate)",
+  "type": "module",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "files": [
+    "dist",
+    "docs",
+    "discord-ai.config.example.json",
+    "discord-ai.policy.example.json",
+    "AGENTS.md",
+    "README.md",
+    "LICENSE"
+  ],
+  "bin": {
+    "discord-ai-interface": "./dist/cli.js",
+    "discord-ai-mcp": "./dist/mcp.js"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./config": {
+      "types": "./dist/config.d.ts",
+      "import": "./dist/config.js"
+    },
+    "./errors": {
+      "types": "./dist/errors.d.ts",
+      "import": "./dist/errors.js"
+    },
+    "./logger": {
+      "types": "./dist/logger.d.ts",
+      "import": "./dist/logger.js"
+    },
+    "./domain": {
+      "types": "./dist/domain.d.ts",
+      "import": "./dist/domain.js"
+    },
+    "./policy": {
+      "types": "./dist/policy.d.ts",
+      "import": "./dist/policy.js"
+    },
+    "./persistence": {
+      "types": "./dist/persistence.d.ts",
+      "import": "./dist/persistence.js"
+    },
+    "./discord": {
+      "types": "./dist/discord.d.ts",
+      "import": "./dist/discord.js"
+    },
+    "./service": {
+      "types": "./dist/service.d.ts",
+      "import": "./dist/service.js"
+    },
+    "./mcp": {
+      "types": "./dist/mcp.d.ts",
+      "import": "./dist/mcp.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "lint": "eslint .",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "smoke": "node scripts/smoke.mjs",
+    "audit": "npm audit --audit-level=high",
+    "verify": "npm run lint && npm run typecheck && npm test && npm run build && npm run smoke && npm run audit"
+  },
+  "dependencies": {
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.22.0",
+    "@types/node": "^22.13.10",
+    "eslint": "^9.22.0",
+    "typescript": "^5.8.2",
+    "typescript-eslint": "^8.26.0",
+    "vitest": "^5.0.0"
+  },
+  "overrides": {
+    "tinybench": "^6.2.0"
+  }
+}

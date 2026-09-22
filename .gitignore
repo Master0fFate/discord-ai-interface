@@ -1,0 +1,31 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+coverage/
+*.tsbuildinfo
+
+# Logs
+*.log
+npm-debug.log*
+
+# Secrets and local configuration — never commit
+.env
+.env.*
+!.env.example
+discord-ai.config.json
+discord-ai.policy.json
+*.local.json
+
+# Local runtime state, audit evidence, and rollback snapshots — never commit
+.discord-ai-interface/
+backups/
+
+# Tool session data
+.parallax/
+
+# Editor and OS noise
+.DS_Store
+.vscode/
+.idea/
