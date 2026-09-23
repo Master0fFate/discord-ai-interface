@@ -20,6 +20,8 @@ discord-ai.policy.json
 
 # Local runtime state, audit evidence, and rollback snapshots — never commit
 .discord-ai-interface/
+.discord-ai-admin/
+.discord-ai-*/
 backups/
 
 # Tool session data
